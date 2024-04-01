@@ -10,7 +10,7 @@ def input_evaluation():
                 print('Please enter your comment')
                 comment = input()
                 post = f'ポイント: {point} コメント: {comment}'
-                with open("data.txt", 'a') as file_pc:
+                with open("data.txt", 'a',encoding="utf-8") as file_pc:
                     file_pc.write(f'{post}\n')
                 break
         else:
@@ -18,7 +18,7 @@ def input_evaluation():
 
 def show_results():
     print('Results so far')
-    with open("data.txt", "r") as read_file:
+    with open("data.txt", "r",encoding="utf-8") as read_file:
         print(read_file.read())
 
 while True:
